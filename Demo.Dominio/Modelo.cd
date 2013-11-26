@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Demo.Dominio.Representante">
+    <Position X="10" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAA=</HashCode>
+      <FileName>Representante.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Demo.Dominio.Venda">
+    <Position X="5.75" Y="4.75" Width="2" />
+    <AssociationLine Name="Cliente" Type="Demo.Dominio.Cliente">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.252" Y="0.287" Height="0.182" Width="0.66" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Comissoes" Type="Demo.Dominio.Comissao">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.756" Y="0.05" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIQAQAgABAIBAAACgBAAAAAAEAAEAAAAADAAIAAA=</HashCode>
+      <FileName>Venda.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cliente" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Comissoes" />
+      <Property Name="ContasAReceber" />
+      <Property Name="ItensDaVenda" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Demo.Dominio.Participante">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAABA=</HashCode>
+      <FileName>Participante.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Demo.Dominio.Cliente">
+    <Position X="5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Demo.Dominio.Produto">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAEAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Produto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Demo.Dominio.ContaAReceber">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <AssociationLine Name="Cliente" Type="Demo.Dominio.Cliente" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.25" Y="5.75" />
+        <Point X="1.25" Y="1.25" />
+        <Point X="4.625" Y="1.25" />
+        <Point X="4.625" Y="1.828" />
+        <Point X="5" Y="1.828" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAACAAAAGAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ContaAReceber.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cliente" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Demo.Dominio.ItemDaVenda">
+    <Position X="2.25" Y="3.5" Width="2" />
+    <AssociationLine Name="Representante" Type="Demo.Dominio.Representante">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.438" Y="-0.496" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QABAABAIAACBAIAgAAAAAAAAAAAAAAAAAAAQIAAAAAE=</HashCode>
+      <FileName>ItemDaVenda.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Representante" />
+      <Property Name="Produto" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Demo.Dominio.Comissao">
+    <Position X="10" Y="5" Width="2" />
+    <AssociationLine Name="Representante" Type="Demo.Dominio.Representante">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.276" Y="0.267" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAggAAAAAAEAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Comissao.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Representante" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

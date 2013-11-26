@@ -1,0 +1,12 @@
+C:\Projetos\Demo TFS\Arquitetura\Demo.Infra.Repositorio\bin\Debug\Demo.Infra.Repositorio.dll.config
+C:\Projetos\Demo TFS\Arquitetura\Demo.Infra.Repositorio\bin\Debug\Demo.Infra.Repositorio.dll
+C:\Projetos\Demo TFS\Arquitetura\Demo.Infra.Repositorio\bin\Debug\Demo.Infra.Repositorio.pdb
+C:\Projetos\Demo TFS\Arquitetura\Demo.Infra.Repositorio\bin\Debug\Demo.Dominio.dll
+C:\Projetos\Demo TFS\Arquitetura\Demo.Infra.Repositorio\bin\Debug\EntityFramework.dll
+C:\Projetos\Demo TFS\Arquitetura\Demo.Infra.Repositorio\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Projetos\Demo TFS\Arquitetura\Demo.Infra.Repositorio\bin\Debug\Demo.Dominio.pdb
+C:\Projetos\Demo TFS\Arquitetura\Demo.Infra.Repositorio\bin\Debug\EntityFramework.xml
+C:\Projetos\Demo TFS\Arquitetura\Demo.Infra.Repositorio\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Projetos\Demo TFS\Arquitetura\Demo.Infra.Repositorio\obj\Debug\Demo.Repositorio.csprojResolveAssemblyReference.cache
+C:\Projetos\Demo TFS\Arquitetura\Demo.Infra.Repositorio\obj\Debug\Demo.Infra.Repositorio.dll
+C:\Projetos\Demo TFS\Arquitetura\Demo.Infra.Repositorio\obj\Debug\Demo.Infra.Repositorio.pdb

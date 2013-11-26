@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9342C7B5-495A-4B24-BB67-E0B0DAC59BE6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Demo.Dominio</RootNamespace>
+    <AssemblyName>Demo.Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Producao|AnyCPU'">
+    <OutputPath>bin\Producao\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\Infra\IUnidadeDeTrabalho.cs" />
+    <Compile Include="Interfaces\Infra\IGerenciadorDeRepositorioHttp.cs" />
+    <Compile Include="Interfaces\Repositorio\IRepositorioBase.cs" />
+    <Compile Include="Interfaces\Repositorio\IRepositorioDeCliente.cs" />
+    <Compile Include="Interfaces\Repositorio\IRepositorioDeContasAReceber.cs" />
+    <Compile Include="Interfaces\Repositorio\IRepositorioDeProduto.cs" />
+    <Compile Include="Interfaces\Repositorio\IRepositorioDeRepresentante.cs" />
+    <Compile Include="Interfaces\Repositorio\IRepositorioDeTransportadora.cs" />
+    <Compile Include="Interfaces\Repositorio\IRepositorioDeVenda.cs" />
+    <Compile Include="Interfaces\Servico\IServicoDeCadastroDeProduto.cs" />
+    <Compile Include="Interfaces\Servico\IServicoDeVenda.cs" />
+    <Compile Include="Servicos\ServicoDeCadastroDeProduto.cs" />
+    <Compile Include="DemoException.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Comissao.cs" />
+    <Compile Include="ContaAReceber.cs" />
+    <Compile Include="Identificador.cs" />
+    <Compile Include="Venda.cs" />
+    <Compile Include="ItemDaVenda.cs" />
+    <Compile Include="Participante.cs" />
+    <Compile Include="Produto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Representante.cs" />
+    <Compile Include="Transportadora.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Modelo.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="bcc7a414-8ed1-43ed-ae27-7a4b6f042742" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="268a8d0f-09ec-4c5e-a9d1-c1610e548fd6" name="Demo.UI">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="5007ae49-7160-40bb-9b80-db902620e1d1" direction="Forward">
+          <layerMoniker Id="8567b265-07df-41cf-958f-fde4ca1f1417" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="a5a698af-4ab0-40b8-8439-3a4bfe1a32d9" direction="Forward">
+          <layerMoniker Id="b0759734-69d2-489e-828b-bf901041df91" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="f7804359-6a42-4b79-980d-6a312c50bf69" name="Demo.UI">
+          <ArtifactNode Label="Demo.UI" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Palestras e Treinamentos/Palestras/DevBrasil Open Day Curitiba 2012/DemoMVC/Demo.UI/Demo.UI.csproj&quot;)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Demo.UI)" Label="Demo.UI.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="c8141020-7fc8-4d16-bed2-4d77c5238579" name="Demo.Repositorio">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="8a404941-84e0-4878-91fe-1f674ff483ae" direction="Forward">
+          <layerMoniker Id="b0759734-69d2-489e-828b-bf901041df91" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="e7573d43-f830-4129-a953-3b2aa8594aad" name="Demo.Repositorio">
+          <ArtifactNode Label="Demo.Repositorio" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Palestras e Treinamentos/Palestras/DevBrasil Open Day Curitiba 2012/DemoMVC/Demo.Infra.Repositorio/Demo.Repositorio.csproj&quot;)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Demo.Infra.Repositorio)" Label="Demo.Infra.Repositorio.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="8567b265-07df-41cf-958f-fde4ca1f1417" name="Demo.Aplicacao">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="8759e97c-0df2-45c2-b0b9-8e44b04e1759" direction="Forward">
+          <layerMoniker Id="b0759734-69d2-489e-828b-bf901041df91" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="124d6152-4e4f-49fc-a643-6ecd2f7f884a" name="Demo.Aplicacao">
+          <ArtifactNode Label="Demo.Aplicacao" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Palestras e Treinamentos/Palestras/DevBrasil Open Day Curitiba 2012/DemoMVC/Demo.Aplicacao/Demo.Aplicacao.csproj&quot;)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Demo.Aplicacao)" Label="Demo.Aplicacao.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="b0759734-69d2-489e-828b-bf901041df91" name="Demo.Dominio">
+      <references>
+        <reference Id="2328de9b-a939-4ec7-8b24-dcec8d1046e1" name="Demo.Dominio">
+          <ArtifactNode Label="Demo.Dominio" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Palestras e Treinamentos/Palestras/DevBrasil Open Day Curitiba 2012/DemoMVC/Demo.Dominio/Demo.Dominio.csproj&quot;)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Demo.Dominio)" Label="Demo.Dominio.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>
