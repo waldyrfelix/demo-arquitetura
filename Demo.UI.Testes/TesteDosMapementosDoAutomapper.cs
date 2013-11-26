@@ -10,8 +10,8 @@ namespace Useall.UI.Testes
         [TestMethod]
         public void Verifica_Se_Configuração_Do_AutoMapper_Está_Correta()
         {
-            //ConfiguraçãoAutoMapper.Inicializar();
-            //Mapper.AssertConfigurationIsValid();
+            ConfiguraçãoAutoMapper.Inicializar();
+            Mapper.AssertConfigurationIsValid();
         }
     }
 }

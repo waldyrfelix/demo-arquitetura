@@ -6,7 +6,7 @@ namespace DemoMVC.Infra
     {
         public static void Inicializar()
         {
-            Mapper.Initialize(i => { i.AddProfile<AutoMapperProfile>(); });
+            Mapper.Initialize(i => i.AddProfile<AutoMapperProfile>());
         }
     }
 }
