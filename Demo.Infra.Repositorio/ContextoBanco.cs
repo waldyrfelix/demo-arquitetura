@@ -1,4 +1,6 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.Spatial;
+using System.Data.Entity.SqlServer;
 using System.Diagnostics;
 using Demo.Dominio;
 using Demo.Infra.Repositorio.Configuracao;
@@ -8,10 +10,8 @@ namespace Demo.Infra.Repositorio
     public class ContextoBanco : DbContext
     {
         public ContextoBanco()
-            : base("conexaoPadrao")
         {
             Database.SetInitializer(new DemoDatabaseInitialize());
-
             Debug.WriteLine("CONTEXTO EF CRIADO: " + GetHashCode());
         }
 
@@ -30,6 +30,8 @@ namespace Demo.Infra.Repositorio
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            var dbSpatialServices = SqlSpatialServices.Default;
+
             modelBuilder.Configurations.Add(new ParticipanteConfig());
             modelBuilder.Configurations.Add(new ContaAReceberConfig());
             modelBuilder.Configurations.Add(new ClienteConfig());

@@ -1,9 +1,9 @@
 ﻿using System.Web;
-using Demo.Dominio.Interfaces.Infra;
+using Demo.Dominio.Interfaces.Infraestrutura;
 
 namespace Demo.Infra.Repositorio.Configuracao
 {
-    public class GerenciadorDeRepositorio : IGerenciadorDeRepositorioHttp
+    public class GerenciadorDeRepositorioHttp : IGerenciadorDeRepositorio
     {
         public const string ContextoHttp = "ContextoHttp";
 
@@ -19,7 +19,7 @@ namespace Demo.Infra.Repositorio.Configuracao
             }
         }
 
-        #region IGerenciadorDeRepositorioHttp Members
+        #region IGerenciadorDeRepositorio Members
 
         public void Finalizar()
         {

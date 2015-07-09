@@ -40,10 +40,9 @@ namespace Demo.Infra.Repositorio.Configuracao
                                          Preço = 4m
                                      });
 
-            var produto = new Produto {CodigoDeBarras = 9876543, Nome = "Coca-Cola", Preço = 4m};
-            var cliente = new Cliente {Inscricao = "000.000.191-00", LimiteDeCredito = 200000, Nome = "Álvaro Brognoli"};
-            var representante = new Representante
-                                    {Inscricao = "001.910.000-00", Nome = "Renan", PercentualDeComissao = 5};
+            var produto = new Produto { CodigoDeBarras = 9876543, Nome = "Coca-Cola", Preço = 4m };
+            var cliente = new Cliente { Inscricao = "000.000.191-00", LimiteDeCredito = 200000, Nome = "Álvaro Brognoli" };
+            var representante = new Representante { Inscricao = "001.910.000-00", Nome = "Renan", PercentualDeComissao = 5 };
             var venda = new Venda
                             {
                                 Cliente = cliente,

@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using Demo.Dominio;
-using Demo.Dominio.Interfaces.Repositorio;
-using Demo.Interfaces.Interfaces.Servico;
+using Demo.Dominio.Interfaces.Aplicação;
+using Demo.Dominio.Interfaces.Domínio;
+using Demo.Dominio.Interfaces.Repositórios;
 
 namespace Demo.Aplicacao
 {

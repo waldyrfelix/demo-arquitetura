@@ -1,0 +1,35 @@
+﻿@model Demo.UI.Mvc.ViewModels.ProdutoViewModel
+<h2>Adicionar Produto</h2>
+<div class="row">
+    <div class="col-lg-12">
+        @Html.ActionLink("Voltar", "Listar")
+
+        @Html.ValidationSummary(null,new {@class = "alert alert-danger"})
+    </div>
+</div>
+
+@using (Html.BeginForm("adicionar", "produto", FormMethod.Post, new { id = "formCadastrar" }))
+{
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nome)
+        @Html.TextBoxFor(model => model.Nome, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Preco)
+        @Html.TextBoxFor(model => model.Preco, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-lg btn-primary"> Salvar </button>
+}
+
+
+
+@section scripts
+{
+
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+}

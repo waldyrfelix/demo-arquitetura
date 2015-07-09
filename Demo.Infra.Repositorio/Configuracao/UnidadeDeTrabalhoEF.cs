@@ -1,25 +1,25 @@
-﻿using Demo.Dominio.Interfaces.Infra;
+﻿using Demo.Dominio.Interfaces.Infraestrutura;
 using Microsoft.Practices.ServiceLocation;
 
 namespace Demo.Infra.Repositorio.Configuracao
 {
     public class UnidadeDeTrabalhoEF : IUnidadeDeTrabalho
     {
-        private ContextoBanco contexto;
+        private ContextoBanco _contexto;
 
         #region IUnidadeDeTrabalho Members
 
         public void Iniciar()
         {
-            var gerenciador = ServiceLocator.Current.GetInstance<IGerenciadorDeRepositorioHttp>()
-                              as GerenciadorDeRepositorio;
+            var gerenciador = ServiceLocator.Current.GetInstance<IGerenciadorDeRepositorio>()
+                              as GerenciadorDeRepositorioHttp;
 
-            contexto = gerenciador.Contexto;
+            _contexto = gerenciador.Contexto;
         }
 
         public void Persistir()
         {
-            contexto.SaveChanges();
+            _contexto.SaveChanges();
         }
 
         #endregion

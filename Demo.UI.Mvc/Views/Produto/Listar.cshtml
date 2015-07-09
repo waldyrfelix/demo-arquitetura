@@ -1,0 +1,30 @@
+﻿@using Demo.UI.Mvc.ViewModels
+@{
+    var produtos = (List<ProdutoViewModel>)ViewBag.Produtos;
+}
+
+<p>@TempData["mensagem"]</p>
+
+<h2>Listar produtos @Html.ActionLink("Novo Produto", "adicionar", "Produto",null, new { @class = "btn btn-primary pull-right" })</h2>
+
+<div class="row">
+    <div class="col-lg-12" id="lista-produtos">
+        @Html.Partial("_ListaDeProdutos", produtos)
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $('#lista-produtos').on('click', '.remover', function (evt) {
+                evt.preventDefault();
+                if (confirm("Tem certeza que deseja excluir esse registro?")) {
+                    $.post($(this).attr('href'), function (html) {
+                        $('#lista-produtos').html(html);
+                    });
+                }
+            });
+        });
+    </script>
+}

@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using Demo.Dominio;
-using Demo.Dominio.Interfaces.Repositorio;
+using Demo.Dominio.Interfaces.Aplicação;
+using Demo.Dominio.Interfaces.Repositórios;
 
 namespace Demo.Aplicacao
 {
-    public class ServicoDeAplicacaoDaTransportadora : ServicoDeAplicacaoBase, Demo.Aplicacao.IServicoDeAplicacaoDaTransportadora
+    public class ServicoDeAplicacaoDaTransportadora : ServicoDeAplicacaoBase, IServicoDeAplicacaoDaTransportadora
     {
         private readonly IRepositorioDeTransportadora _repositorioDeTransportadora;
 

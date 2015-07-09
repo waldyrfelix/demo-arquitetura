@@ -1,0 +1,26 @@
+﻿@using Demo.UI.Mvc.ViewModels
+@model List<Demo.UI.Mvc.ViewModels.ProdutoViewModel>
+@{
+    var grid = new WebGrid(Model);
+    var total = Model.Sum(produto => produto.Preco);
+    var quantidade = Model.Count();
+}
+
+@helper displayNome(ProdutoViewModel produto)
+{
+    @Html.DisplayFor(model => produto.Nome)
+}
+
+@helper displayPreco(ProdutoViewModel produto)
+{
+    @Html.DisplayFor(model => produto.Preco)
+}
+
+@grid.GetHtml(tableStyle: "table table-striped table-hover", columns: new[]{
+    grid.Column("Nome", format: d=> displayNome((ProdutoViewModel)d.Value)),
+    grid.Column("Preco", format: d=> displayPreco((ProdutoViewModel)d.Value)),
+    grid.Column(format: d => Html.ActionLink("Remover", "deletar", new { nome = d.Nome },
+            new { @class = "btn btn-danger btn-xs remover" }))
+})
+<p><strong>Total: </strong>@total.ToString("c")</p>
+<p><strong>Quantidade: </strong>@quantidade</p>

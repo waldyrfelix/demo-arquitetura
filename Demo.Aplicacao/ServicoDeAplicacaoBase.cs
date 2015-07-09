@@ -1,21 +1,21 @@
-﻿using Demo.Dominio.Interfaces.Infra;
+﻿using Demo.Dominio.Interfaces.Infraestrutura;
 using Microsoft.Practices.ServiceLocation;
 
 namespace Demo.Aplicacao
 {
     public class ServicoDeAplicacaoBase
     {
-        private IUnidadeDeTrabalho unidadeDeTrabalho;
+        private IUnidadeDeTrabalho _unidadeDeTrabalho;
 
         public virtual void IniciarTransação()
         {
-            unidadeDeTrabalho = ServiceLocator.Current.GetInstance<IUnidadeDeTrabalho>();
-            unidadeDeTrabalho.Iniciar();
+            _unidadeDeTrabalho = ServiceLocator.Current.GetInstance<IUnidadeDeTrabalho>();
+            _unidadeDeTrabalho.Iniciar();
         }
 
         public virtual void PersistirTransação()
         {
-            unidadeDeTrabalho.Persistir();
+            _unidadeDeTrabalho.Persistir();
         }
     }
 }

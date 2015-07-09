@@ -7,7 +7,7 @@ namespace Demo.Infra.Repositorio.Configuracao
     {
         public ClienteConfig()
         {
-            ToTable("cliente");
+            ToTable("Cliente");
         }
     }
 
@@ -15,22 +15,20 @@ namespace Demo.Infra.Repositorio.Configuracao
     {
         public ContaAReceberConfig()
         {
-            ToTable("conta_receber");
+            ToTable("ContasReceber");
 
             Property(x => x.Numero)
-                .HasColumnName("numero")
                 .HasMaxLength(100)
                 .IsRequired();
 
             Property(x => x.DataDeEmissao)
-                .HasColumnName("data_emissao")
-                .HasColumnType("date");
+                .HasColumnType("Date");
 
             Property(x => x.Valor)
                 .HasPrecision(10, 2);
 
             Property(x => x.DataDeVencimento)
-                .HasColumnType("date");
+                .HasColumnType("Date");
 
             HasRequired(x => x.Cliente)
                 .WithMany();
@@ -59,13 +57,13 @@ namespace Demo.Infra.Repositorio.Configuracao
     {
         public RepresentanteConfig()
         {
-            ToTable("representante");
+            ToTable("Representante");
 
             HasMany(x => x.Clientes)
                 .WithMany(x => x.Representantes)
                 .Map(m =>
                          {
-                             m.ToTable("cliente_representante");
+                             m.ToTable("ClienteRepresentante");
                              m.MapLeftKey("ClienteId");
                              m.MapRightKey("RepresentanteId");
                          });
@@ -76,7 +74,7 @@ namespace Demo.Infra.Repositorio.Configuracao
     {
         public ParticipanteConfig()
         {
-            ToTable("participante");
+            ToTable("Participante");
             Property(x => x.Nome).IsRequired().HasMaxLength(100);
             Property(x => x.Inscricao).IsRequired().HasMaxLength(100);
         }

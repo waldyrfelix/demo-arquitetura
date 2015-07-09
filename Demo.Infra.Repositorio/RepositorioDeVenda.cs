@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Demo.Dominio;
-using Demo.Dominio.Interfaces.Repositorio;
+using Demo.Dominio.Interfaces.Repositórios;
 
 namespace Demo.Infra.Repositorio
 {
@@ -13,12 +13,12 @@ namespace Demo.Infra.Repositorio
 
         public IList<Venda> RecuperarVendasPorData(DateTime data)
         {
-            return entidades.Vendas.Where(venda => venda.DataDaEmissao == data).ToList();
+            return _contexto.Vendas.Where(venda => venda.DataDaEmissao == data).ToList();
         }
 
         public IList<Venda> RecuperarVendas(DateTime? datainicial, DateTime? datafinal, int? cliente)
         {
-            IQueryable<Venda> query = entidades.Vendas.AsQueryable();
+            IQueryable<Venda> query = _contexto.Vendas.AsQueryable();
             if (datainicial.HasValue)
             {
                 query = query.Where(x => x.DataDaEmissao >= datainicial);

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Demo.Dominio;
-using Demo.Dominio.Interfaces.Repositorio;
+using Demo.Dominio.Interfaces.Repositórios;
 
 namespace Demo.Infra.Repositorio
 {
@@ -13,24 +13,24 @@ namespace Demo.Infra.Repositorio
 
         public Produto ObterProdutoPorNome(string nome)
         {
-            return entidades.Produtos.Single(x => x.Nome == nome);
+            return _contexto.Produtos.Single(x => x.Nome == nome);
         }
 
         public IList<Produto> RecuperarTodos()
         {
-            return entidades.Produtos.ToList();
+            return _contexto.Produtos.ToList();
         }
 
         public bool ProdutoJáExiste(string nome)
         {
-            return entidades.Produtos.Any(x =>
+            return _contexto.Produtos.Any(x =>
                                           x.Nome.Equals(nome, StringComparison.InvariantCultureIgnoreCase));
         }
 
         public void RemoverPorNome(string nome)
         {
             Produto produto = ObterProdutoPorNome(nome);
-            entidades.Produtos.Remove(produto);
+            _contexto.Produtos.Remove(produto);
         }
 
         #endregion

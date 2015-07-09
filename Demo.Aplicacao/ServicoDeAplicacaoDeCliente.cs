@@ -1,6 +1,6 @@
 ﻿using Demo.Dominio;
-using Demo.Dominio.Interfaces.Infra;
-using Demo.Dominio.Interfaces.Repositorio;
+using Demo.Dominio.Interfaces.Aplicação;
+using Demo.Dominio.Interfaces.Repositórios;
 
 namespace Demo.Aplicacao
 {
@@ -17,8 +17,7 @@ namespace Demo.Aplicacao
 
         public Cliente RecuperarClientePorId(int id)
         {
-            //return new Cliente();
-            return _repositorioDeCliente.RecuperarPorId(id);
+            return _repositorioDeCliente.Recuperar(id);
         }
 
         #endregion

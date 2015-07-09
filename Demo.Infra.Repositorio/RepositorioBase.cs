@@ -1,76 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
 using Demo.Dominio;
-using Demo.Dominio.Interfaces.Infra;
-using Demo.Dominio.Interfaces.Repositorio;
+using Demo.Dominio.Interfaces.Infraestrutura;
+using Demo.Dominio.Interfaces.Repositórios;
 using Demo.Infra.Repositorio.Configuracao;
 using Microsoft.Practices.ServiceLocation;
 
 namespace Demo.Infra.Repositorio
 {
-    public class RepositorioBase<TEntidade>
-        : IRepositorioBase<TEntidade> where TEntidade : Identificador
+    public class RepositorioBase<TEntidade> : 
+        IRepositorioBase<TEntidade> where TEntidade : Identificador
     {
-        protected ContextoBanco entidades;
+        protected readonly ContextoBanco _contexto;
 
         public RepositorioBase()
         {
-            var gerenciador = ServiceLocator.Current.GetInstance<IGerenciadorDeRepositorioHttp>()
-                              as GerenciadorDeRepositorio;
+            var gerenciador = (GerenciadorDeRepositorioHttp) ServiceLocator.Current.GetInstance<IGerenciadorDeRepositorio>();
 
-            entidades = gerenciador.Contexto;
+            _contexto = gerenciador.Contexto;
 
-            Debug.WriteLine("ID DO CONTEXTO EF: " + entidades.GetHashCode());
+            Debug.WriteLine("ID DO CONTEXTO EF: " + _contexto.GetHashCode());
         }
 
         #region IRepositorioBase<TEntidade> Members
 
-        public TEntidade RecuperarPorId(int id)
+        public TEntidade Recuperar(int id)
         {
-            return entidades.Set<TEntidade>()
-                .Where(x => x.Id == id)
-                .SingleOrDefault();
-        }
-
-        public TEntidade RecuperarUmPorExemplo(TEntidade filtro)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IList<TEntidade> RecuperarPaginadoPorExemplo(TEntidade filtro, int paginaAtual, int tamanhoDaPagina)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IList<TEntidade> RecuperarPaginado(int paginaAtual, int tamanhoDaPagina)
-        {
-            return entidades.Set<TEntidade>()
-                .Skip(paginaAtual*tamanhoDaPagina)
-                .Take(tamanhoDaPagina)
-                .ToList();
+            return _contexto.Set<TEntidade>().SingleOrDefault(x => x.Id == id);
         }
 
         public void Inserir(TEntidade obj)
         {
-            entidades.Set<TEntidade>().Add(obj);
+            _contexto.Set<TEntidade>().Add(obj);
         }
 
         public void Alterar(TEntidade obj)
         {
-            entidades.Entry(obj).State = EntityState.Modified;
+            _contexto.Entry(obj).State = EntityState.Modified;
         }
 
         public void Remover(TEntidade obj)
         {
-            entidades.Set<TEntidade>().Remove(obj);
+            _contexto.Set<TEntidade>().Remove(obj);
         }
 
         public void Remover(int id)
         {
-            TEntidade obj = RecuperarPorId(id);
+            TEntidade obj = Recuperar(id);
             Remover(obj);
         }
 

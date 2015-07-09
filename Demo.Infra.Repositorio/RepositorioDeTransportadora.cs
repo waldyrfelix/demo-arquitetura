@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Demo.Dominio;
-using Demo.Dominio.Interfaces.Repositorio;
+using Demo.Dominio.Interfaces.Repositórios;
 
 namespace Demo.Infra.Repositorio
 {
@@ -12,7 +12,7 @@ namespace Demo.Infra.Repositorio
 
         public IList<Transportadora> RecuperarTodos()
         {
-            return entidades.Transportadoras.ToList();
+            return _contexto.Transportadoras.ToList();
         }
 
         #endregion
