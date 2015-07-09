@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
-using Demo.Aplicacao;
 using Demo.Dominio;
-using DemoMVC.Controllers;
+using Demo.Dominio.Interfaces.Aplicação;
+using Demo.UI.Mvc.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Demo.Dominio;
-using Demo.Dominio.Interfaces.Infra;
-using Demo.Dominio.Interfaces.Repositorio;
-using Demo.Interfaces.Interfaces.Servico;
+using Demo.Dominio.Interfaces.Domínio;
+using Demo.Dominio.Interfaces.Infraestrutura;
+using Demo.Dominio.Interfaces.Repositórios;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;

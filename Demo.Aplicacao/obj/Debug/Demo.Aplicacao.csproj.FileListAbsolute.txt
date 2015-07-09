@@ -1,9 +1,0 @@
-C:\Projetos\Demo TFS\Arquitetura\Demo.Aplicacao\bin\Debug\Demo.Aplicacao.dll
-C:\Projetos\Demo TFS\Arquitetura\Demo.Aplicacao\bin\Debug\Demo.Aplicacao.pdb
-C:\Projetos\Demo TFS\Arquitetura\Demo.Aplicacao\bin\Debug\Demo.Dominio.dll
-C:\Projetos\Demo TFS\Arquitetura\Demo.Aplicacao\bin\Debug\Microsoft.Practices.ServiceLocation.dll
-C:\Projetos\Demo TFS\Arquitetura\Demo.Aplicacao\bin\Debug\Demo.Dominio.pdb
-C:\Projetos\Demo TFS\Arquitetura\Demo.Aplicacao\bin\Debug\Microsoft.Practices.ServiceLocation.xml
-C:\Projetos\Demo TFS\Arquitetura\Demo.Aplicacao\obj\Debug\Demo.Aplicacao.csprojResolveAssemblyReference.cache
-C:\Projetos\Demo TFS\Arquitetura\Demo.Aplicacao\obj\Debug\Demo.Aplicacao.dll
-C:\Projetos\Demo TFS\Arquitetura\Demo.Aplicacao\obj\Debug\Demo.Aplicacao.pdb

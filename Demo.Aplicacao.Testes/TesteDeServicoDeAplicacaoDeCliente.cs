@@ -1,4 +1,4 @@
-﻿using Demo.Dominio.Interfaces.Repositorio;
+﻿using Demo.Dominio.Interfaces.Repositórios;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
@@ -24,7 +24,7 @@ namespace Demo.Aplicacao.Testes
             servico.RecuperarClientePorId(123);
 
             // assert
-            mockDoRepositorioDeCliente.Verify(x => x.RecuperarPorId(123), Times.Once());
+            mockDoRepositorioDeCliente.Verify(x => x.Recuperar(123), Times.Once());
         }
     }
 }

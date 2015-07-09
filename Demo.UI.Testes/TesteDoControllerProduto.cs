@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
-using Demo.Aplicacao;
 using Demo.Dominio;
-using Demo.UI.Controllers;
-using DemoMVC.Models;
+using Demo.Dominio.Interfaces.Aplicação;
+using Demo.UI.Mvc.Controllers;
+using Demo.UI.Mvc.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
@@ -29,11 +29,11 @@ namespace Demo.UI.Testes
             controller.ModelState.AddModelError("", "Erro qualquer.");
 
             // act
-            var jsonResult = controller.Adicionar(viewModel) as JsonResult;
+            var viewResult = controller.Adicionar(viewModel) as ViewResult;
 
             // assert
-            Assert.AreEqual("{ erro = Erro no form }",
-                jsonResult.Data.ToString());
+            Assert.IsNotNull(viewResult.Model);
+            Assert.IsInstanceOfType(viewResult.Model, typeof(ProdutoViewModel));
         }
 
         [TestMethod]

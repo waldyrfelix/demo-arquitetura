@@ -1,7 +1,0 @@
-C:\Projetos\Demo TFS\Arquitetura\Demo.Dominio.Testes\bin\Debug\Demo.Dominio.Testes.dll
-C:\Projetos\Demo TFS\Arquitetura\Demo.Dominio.Testes\bin\Debug\Demo.Dominio.Testes.pdb
-C:\Projetos\Demo TFS\Arquitetura\Demo.Dominio.Testes\bin\Debug\Demo.Dominio.dll
-C:\Projetos\Demo TFS\Arquitetura\Demo.Dominio.Testes\bin\Debug\Demo.Dominio.pdb
-C:\Projetos\Demo TFS\Arquitetura\Demo.Dominio.Testes\obj\Debug\Demo.Dominio.Testes.csprojResolveAssemblyReference.cache
-C:\Projetos\Demo TFS\Arquitetura\Demo.Dominio.Testes\obj\Debug\Demo.Dominio.Testes.dll
-C:\Projetos\Demo TFS\Arquitetura\Demo.Dominio.Testes\obj\Debug\Demo.Dominio.Testes.pdb

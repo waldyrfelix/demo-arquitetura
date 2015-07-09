@@ -1,9 +1,0 @@
-C:\Projetos\Demo TFS\Arquitetura\Demo.Dominio\bin\Debug\Demo.Dominio.dll
-C:\Projetos\Demo TFS\Arquitetura\Demo.Dominio\bin\Debug\Demo.Dominio.pdb
-C:\Projetos\Demo TFS\Arquitetura\Demo.Dominio\obj\Debug\Demo.Dominio.csprojResolveAssemblyReference.cache
-C:\Projetos\Demo TFS\Arquitetura\Demo.Dominio\obj\Debug\Demo.Dominio.dll
-C:\Projetos\Demo TFS\Arquitetura\Demo.Dominio\obj\Debug\Demo.Dominio.pdb
-C:\Users\Waldyr\Source\Repos\demo-arquitetura\Demo.Dominio\bin\Debug\Demo.Dominio.dll
-C:\Users\Waldyr\Source\Repos\demo-arquitetura\Demo.Dominio\bin\Debug\Demo.Dominio.pdb
-C:\Users\Waldyr\Source\Repos\demo-arquitetura\Demo.Dominio\obj\Debug\Demo.Dominio.dll
-C:\Users\Waldyr\Source\Repos\demo-arquitetura\Demo.Dominio\obj\Debug\Demo.Dominio.pdb

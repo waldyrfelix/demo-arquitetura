@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using DemoMVC.Infra;
+using Demo.UI.Mvc.Infra;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Useall.UI.Testes
