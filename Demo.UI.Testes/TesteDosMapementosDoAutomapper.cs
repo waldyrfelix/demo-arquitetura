@@ -2,7 +2,7 @@
 using Demo.UI.Mvc.Infra;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Useall.UI.Testes
+namespace Demo.UI.Testes
 {
     [TestClass]
     public class TesteDosMapementosDoAutomapper
@@ -11,7 +11,7 @@ namespace Useall.UI.Testes
         public void Verifica_Se_Configuração_Do_AutoMapper_Está_Correta()
         {
             ConfiguraçãoAutoMapper.Inicializar();
-            Mapper.AssertConfigurationIsValid();
+            Mapper.Configuration.AssertConfigurationIsValid();
         }
     }
 }

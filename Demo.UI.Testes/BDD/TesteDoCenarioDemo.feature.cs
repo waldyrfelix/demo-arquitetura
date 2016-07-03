@@ -10,12 +10,12 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 #region Designer generated code
+
+using TechTalk.SpecFlow;
+
 #pragma warning disable
-namespace Demo.UI.Testes
+namespace Demo.UI.Testes.BDD
 {
-    using TechTalk.SpecFlow;
-    
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
@@ -48,7 +48,7 @@ namespace Demo.UI.Testes
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "Cadastro de um novo produto")))
             {
-                Demo.UI.Testes.CadastroDeUmNovoProdutoFeature.FeatureSetup(null);
+                CadastroDeUmNovoProdutoFeature.FeatureSetup(null);
             }
         }
         

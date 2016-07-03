@@ -1,5 +1,4 @@
 ﻿using System.Data.Entity;
-using System.Data.Entity.Spatial;
 using System.Data.Entity.SqlServer;
 using System.Diagnostics;
 using Demo.Dominio;

@@ -2,7 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
 
-namespace Demo.UI.Testes
+namespace Demo.UI.Testes.BDD
 {
     [Binding]
     public class CenárioCadastroDeProdutoTestes
